@@ -1,0 +1,33 @@
+package com.rcalderon.restfulserviceconsuming;
+
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
+@JsonIgnoreProperties(ignoreUnknown = true)
+public class Quote {
+    String type;
+    Value value;
+
+    public Quote() {}
+
+    public Quote(String type, Value value) {
+        this.type = type;
+        this.value = value;
+    }
+
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
+    }
+
+    public Value getValue() {
+        return value;
+    }
+
+    public void setValue(Value value) {
+        this.value = value;
+    }
+}
